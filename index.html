@@ -4,35 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de média</title>
-    <script>
-        function calcularMedia() {
-            var nota1 = parseFloat(document.getElementById('nota1').value);
-            var nota2 = parseFloat(document.getElementById('nota2').value);
-            var nota3 = parseFloat(document.getElementById('nota3').value);
-
-            var media = nota1*0.2 + nota2*0.2 + nota3*0.6;
-
-            document.getElementById('resultado').innerHTML = "A média é: " + media.toFixed(2);
-        }
-    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>Cálculo de Média</h1>
+    <div class="container">
+        <h1>Cálculo de Média</h1>
     
-    <label for="nota1">Nota 1:</label>
-    <input type="number" id="nota1" step="0.01"><br><br>
+        <div class="fields">
+            <div class="form-floating nota1 my-2">
+                <input class="form-control" type="number" id="nota1" step="0.01" placeholder="1" aria-labelledby="nota1HelpBlock">
+                <label class="form-label" for="nota1">Nota 1</label>
+                <div id="nota1HelpBlock" class="form-text">
+                    Peso = 20%.
+                </div>
+            </div>
 
-    <label for="nota2">Nota 2:</label>
-    <input type="number" id="nota2" step="0.01"><br><br>
+            <div class="form-floating nota2 my-2">
+                <input class="form-control" type="number" id="nota2" step="0.01" placeholder="2" aria-labelledby="nota2HelpBlock">
+                <label class="form-label" for="nota2">Nota 2</label>
+                <div id="nota2HelpBlock" class="form-text">
+                    Peso = 20%.
+                </div>
+            </div>
 
-    <label for="nota3">Nota 3:</label>
-    <input type="number" id="nota3" step="0.01"><br><br>
+            <div class="form-floating nota3 my-2">
+                <input class="form-control" type="number" id="nota3" step="0.01" placeholder="2" aria-labelledby="nota3HelpBlock">
+                <label class="form-label" for="nota3">Nota 3</label>
+                <div id="nota3HelpBlock" class="form-text">
+                    Peso = 60%.
+                </div>
+            </div>
+        </div>
 
-    <button class="btn btn-outline-dark" onclick="calcularMedia()">Calcular Média</button>
+        <button class="btn btn-outline-dark" onclick="calcularMedia()">Calcular Média</button>
 
-    <div id="resultado"></div>
+        <div id="resultado"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
