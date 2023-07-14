@@ -1,4 +1,4 @@
-# CalculaMediaEAD
+# Calculadora de Média EAD
 
 Esta calculadora de média foi desenvolvida para auxiliar os estudantes do EAD da Católica de Santa Catarina no cálculo das médias de suas disciplinas. É importante ressaltar que essa calculadora não realiza uma média aritmética simples, mas sim uma média ponderada de acordo com os critérios estabelecidos pela instituição.
 
